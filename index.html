@@ -15,7 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="js/pdfobject.min.js"></script>
     <link rel="stylesheet" type="text/css" href="img/social-icons-sprites/css/style.css">
 
     <style>
@@ -41,14 +40,17 @@ article {
   margin: auto;
   color: #DDDDDD;
   background-color: black;
+  display: table-row;
 }
 section {
   float: left;
   margin: auto;
   padding: 10px;
+  max-width: 300px;
   border: 1px solid white;
   color: #DDDDDD;
   background-color: #212121;
+  display: table-cell;
 }
 h1 {
   font-family: Verdana, Geneva, sans-serif
@@ -69,41 +71,46 @@ a {
   color: #DEDEDE;
 }
 footer {
-  position: absolute;
-  bottom: 5px;
+  position: relative;
+  bottom: 1px;
   width: 97%;
   font-family: Verdana, Geneva, sans-serif;
   color: #DDDDDD;
   text-align: center;
-  border: 1px solid grey;
+  border: 0;
   font-size: small;
 }
     </style>
   </head>
   <body>
     <header>"The effort to understand the universe is one of the very few things which lifts human life a little above the level of farce and gives it some of the grace of tragedy." -- <a href="https://en.wikiquote.org/wiki/Steven_Weinberg">Steven Weinberg</a></header>
-    <article>
-      <p>Greetings</p>
-      <section>
-        <audio id="audio_nickname" preload="auto">
-          <source src="snd/adi.mp3" type="audio/mp3">
-          adi
-        </audio>
-        <p><img src="img/3e3bdbf.jpg" width="35px"/> I am Aditya Varun Chadha (<em id="nickname" style="cursor: progress;">&#x1f50a;adi</em>). I am a professional computer program writer and I enjoy my work. Primary focus is on search engines, relevance engineering, recommender systems, distributed systems, data parallelism, and low latency. I currently code primarily in Scala and Python. Primordial inspiration draws from Geometry, Algebra, Algorithms. Interested in <a href="https://en.wikipedia.org/wiki/Computational_learning_theory">learning</a>, <a href="https://en.wikipedia.org/wiki/Systems_theory">systems theory</a>, <a href="https://en.wikipedia.org/wiki/Epistemology">epistemology</a>, literature.</p>
-        <div class="icons">
-          <a class="linkedin" href="http://linkedin.com/in/adichad"></a>
-          <a class="twitter" href="http://twitter.com/adichad"></a>
-          <a class="github" href="http://github.com/adichad"></a>
-        </div>
-        <script lang="javascript">
-          var audio_nickname = $("#audio_nickname")[0];
-          $("#nickname").mouseenter(function() { audio_nickname.play(); });
-        </script>
-      </section>
-      <section id="resume" style="height: 90%;">
-        <iframe src="http://docs.google.com/gview?url=http://adichad.com/doc/aditya_varun_chadha_20160419.pdf#page=2&embedded=true" frameborder="0"></iframe>
-      </section>
-    </article>
+    <div style="height: 100%;">
+      <article>
+        <p>Greetings</p>
+        <section>
+          <audio id="audio_nickname" preload="auto">
+            <source src="snd/adi.mp3" type="audio/mp3">
+            adi
+          </audio>
+          <p><img src="img/3e3bdbf.jpg" width="35px"/> I am Aditya Varun Chadha (<em id="nickname" style="cursor: progress;">&#x1f50a;adi</em>). I am a professional computer program writer and I enjoy my work. Primary focus is on search engines, relevance engineering, recommender systems, distributed systems, data parallelism, and low latency. I currently code primarily in Scala and Python. Primordial inspiration draws from Geometry, Algebra, Algorithms. Interested in <a href="https://en.wikipedia.org/wiki/Computational_learning_theory">learning</a>, <a href="https://en.wikipedia.org/wiki/Systems_theory">systems theory</a>, <a href="https://en.wikipedia.org/wiki/Epistemology">epistemology</a>, literature.</p>
+          <div class="icons">
+            <a class="linkedin" href="http://linkedin.com/in/adichad"></a>
+            <a class="twitter" href="http://twitter.com/adichad"></a>
+            <a class="github" href="http://github.com/adichad"></a>
+          </div>
+          <script lang="javascript">
+            var audio_nickname = $("#audio_nickname")[0];
+            $("#nickname").mouseenter(function() { audio_nickname.play(); });
+          </script>
+        </section>
+        <section data="doc/aditya_varun_chadha_20160419.pdf#page=1" type="application/pdf">
+          <iframe src="doc/aditya_varun_chadha_20160419.pdf#page=1" width="100%" height="218px" style="width: 100%; border: none;">
+            <a href="doc/aditya_varun_chadha_20160419.pdf">Download Resume</a>
+          </iframe>
+          <p><a href="doc/aditya_varun_chadha_20160419.pdf">Download Resume</a></p>
+        </section>
+      </article>
+    </div>
     <footer>Reality is the intersection of imaginations.</footer>
   </body>
 </html>
