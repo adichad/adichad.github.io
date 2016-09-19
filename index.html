@@ -12,26 +12,74 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
     <style>
-    section {
-      float: left;
-      margin: 3px;
-      padding: 10px;
-      max-width: 300px;
-      height: 300px;
-      border: 1px solid white;
-      background-color: grey;
-    } 
+html {
+  height: 100%;
+}
+* html #page {
+  height: 100%;
+}
+#page {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  height: 100%;
+  background-color: black;
+}
+article {
+  float: left;
+  margin: auto;
+  color: #DDDDDD;
+  background-color: black;
+}
+section {
+  float: left;
+  margin: auto;
+  padding: 10px;
+  max-width: 300px;
+  border: 1px solid white;
+  color: #DDDDDD;
+  background-color: #212121;
+}
+h1 {
+  font-family: Verdana, Geneva, sans-serif
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+}
+img {
+  border: 1px dotted grey;
+}
+header {
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #DDDDDD;
+}
+a {
+  color: #DEDEDE;
+}
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 97%;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #DDDDDD;
+  text-align: center;
+  border: 1px solid grey;
+  font-size: small;
+}
     </style>
-    <script src="https://d3js.org/d3.v4.min.js"/>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
   </head>
   <body>
-    <header>Aditya Varun Chadha</header>
+    <header>"The effort to understand the universe is one of the very few things which lifts human life a little above the level of farce and gives it some of the grace of tragedy." -- <a href="https://en.wikiquote.org/wiki/Steven_Weinberg">Steven Weinberg</a></header>
     <article>
+      <p>Greetings</p>
       <section>
-        <h1>Who?</h1>
-        <p>Aditya Varun Chadha, a computer program writer, always in the making.</p>
+        <p><img src="img/3e3bdbf.jpg" width="35px"/> I am Aditya Varun Chadha (adi). I am a professional computer program writer and I enjoy my work. Primary focus is on search engines, relevance engineering, recommender systems, distributed systems, data parallelism, and low latency. I currently code primarily in scala, and a little bit in Python. Primordial inspiration draws from Geometry, Algebra, Graph spectra, Network Flows, Algorithms. Interested (but not adept) in learning.</p>
       </section>
     </article>
-    <footer>"Reality is the intersection of imaginations." - adichad</footer>
+    <footer>Reality is the intersection of imaginations.</footer>
   </body>
 </html>
